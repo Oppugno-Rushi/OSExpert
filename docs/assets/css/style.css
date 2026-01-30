@@ -105,9 +105,10 @@ figcaption{color:var(--muted);font-size:12.5px;margin-top:8px}
 .benchmark-right .img{height:100%;object-fit:contain}
 .img-small{max-width:100%;width:100%}
 .img-table{max-width:100%;width:100%}
-.img-example{max-width:100%;width:100%}
+.img-example{max-width:100%;width:100%;height:400px;object-fit:contain;object-position:center}
 .example-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
 .example-grid .figure{display:flex;flex-direction:column}
+.example-grid .figure img{width:auto;max-width:100%}
 .res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px}
 .res{
   display:block;text-decoration:none;color:var(--ink);

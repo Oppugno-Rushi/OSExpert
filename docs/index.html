@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OSExpert</title>
+  <meta name="description" content="OSExpert-Eval: Benchmarking General Computer-Use Agents on Professional Expertise" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body id="top">
+  <header class="header">
+    <div class="container">
+      <div class="toprow">
+        <div class="brand">
+          <div class="brand__name">OSExpert</div>
+          <div class="brand__tag">OSExpert-Eval: Benchmarking General Computer-Use Agents on Professional Expertise</div>
+        </div>
+        <nav class="nav">
+          <a href="#abstract">Abstract</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#examples">Examples</a>
+          <a href="#method">Method</a>
+          <a href="#resources">Resources</a>
+          <a href="#citation">BibTeX</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <h1 class="hero__title">I'm Professional: Self-Teaching Computer-Use Agents with Professional Skills</h1>
+        <div class="hero__authors">Jiateng Liu, Zhenhailong Wang, Rushi Wang, Bingxuan Li, Jeonghwan Kim, Aditi Tiwari, Pengfei Yu, Denghui Zhang, Heng Ji</div>
+
+        <div class="hero__buttons">
+          <a class="btn btn--primary" href="assets/files/paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+          <a class="btn" href="https://github.com/Oppugno-Rushi/OSExpert" target="_blank" rel="noopener">Code</a>
+          <a class="btn" href="#" title="Replace with your arXiv link">arXiv</a>
+          <a class="btn" href="#" title="Replace with your dataset link">Dataset</a>
+          <a class="btn" href="#" title="Replace with your leaderboard link">Leaderboard</a>
+        </div>
+
+        <div class="note">
+          Tip: replace the placeholder links (arXiv/Dataset/Leaderboard) in <code>index.html</code>.
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Motivation &amp; Overview</h2>
+        <p class="lead">
+          OSExpert-Eval shows that current computer-use agents remain far from expert-level: they struggle with long-horizon tasks,
+          generalize poorly to unseen UI designs, lack fine-grained control over action sequences, and still fall well short of human expert efficiency.
+        </p>
+
+        <figure class="figure">
+          <img src="assets/images/benchmark_overview.png" alt="OSExpert-Eval overview" class="img" />
+          <figcaption>OSExpert-Eval benchmarks agents on (a) long-horizon tasks, (b) unseen UI generalization, (c) fine-grained actions, and (d) efficiency vs. humans.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="abstract" class="section section--alt">
+      <div class="container">
+        <h2>Abstract</h2>
+        <p>General-purpose computer-use agents have shown<br/>impressive performance across diverse digital<br/>environments. However, our new benchmark,<br/>OSExpert-Eval, indicates they remain far less<br/>helpful than human experts. Although inference-<br/>time scaling enables adaptation, these agents com-<br/>plete complex tasks inefficiently with degraded<br/>performance, transfer poorly to unseen UIs, and<br/>struggle with fine-grained action sequences. To<br/>solve the problem, we introduce a GUI-based<br/>depth-first search (GUI-DFS) exploration algo-<br/>rithm to comprehensively explore and verify an<br/>environment’s unit functions. The agent then ex-<br/>ploits compositionality between unit skills to self-<br/>construct a curriculum for composite tasks. To<br/>support fine-grained actions, we curate a database<br/>of action primitives for agents to discover during<br/>exploration; these are saved as a skill set once<br/>the exploration is complete. We use the learned<br/>skills to improve the agent’s performance and ef-<br/>ficiency by (1) enriching agents with ready-to-use<br/>procedural knowledge, allowing them to plan only<br/>once for long trajectories and generate accurate<br/>actions, and (2) enabling them to end inference-<br/>time scaling earlier by realizing their boundary<br/>of capabilities. Extensive experiments show that<br/>our environment-learned agent takes a meaningful<br/>step toward expert-level computer use, achieving<br/>a 17% performance gain on OSExpert-Eval and<br/>closing the efficiency gap to humans by 89%.</p>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section">
+      <div class="container">
+        <h2>OSExpert-Eval Benchmark</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Task categories</h3>
+            <ul>
+              <li><b>Long-Horizon compositional workflows</b> (LibreOffice + GIMP)</li>
+              <li><b>Unseen UI generalization</b> (Tableau + MiniWord)</li>
+              <li><b>Fine-grained action execution</b> (GIMP + LibreOffice)</li>
+              <li><b>Efficiency</b> vs. human experts (time-to-complete)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Scale</h3>
+            <ul>
+              <li><b>113</b> total tasks</li>
+              <li>Long Horizon: <b>30</b> tasks</li>
+              <li>Unseen UI: <b>50</b> tasks</li>
+              <li>Fine-Grained: <b>33</b> tasks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="figure">
+            <img src="assets/images/data_distribution.png" alt="Task distribution pie chart" class="img" />
+            <figcaption>The inner ring shows the three high-level categories, while the outer ring breaks each category down by environment; slice sizes are proportional to the number of tasks.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section section--alt">
+      <div class="container">
+        <h2>Representative Task Examples</h2>
+        <p class="lead">
+          Each example includes the initialization state, the natural-language task instruction, and the ground-truth outcome.
+        </p>
+
+        <div class="example-grid">
+          <figure class="figure">
+            <img src="assets/images/examples_unseen_ui.png" alt="Unseen UI examples" class="img" />
+            <figcaption><b>Unseen UI:</b> Tableau + MiniWord examples.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="assets/images/examples_long_horizon.png" alt="Long-horizon examples" class="img" />
+            <figcaption><b>Long Horizon:</b> LibreOffice Calc/Writer examples.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="assets/images/examples_fine_grained.png" alt="Fine-grained examples" class="img" />
+            <figcaption><b>Fine-Grained:</b> GIMP manipulation examples.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="section">
+      <div class="container">
+        <h2>OSExpert Method</h2>
+        <div class="grid2">
+          <div>
+            <p class="lead">
+              OSExpert learns verifiable skills from <b>bottom-up self-exploration</b> and reuses them for robust, efficient inference.
+            </p>
+            <ul>
+              <li><b>GUI-DFS exploration</b> to discover and verify unit functions.</li>
+              <li><b>Curriculum construction</b> by composing unit skills into composite procedures.</li>
+              <li><b>Fine-grained action primitives</b> discovered during exploration and stored as reusable skills.</li>
+              <li><b>Efficiency</b> via single-pass fast planning and a <b>skill-boundary check</b> for early stopping.</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">Key reported gains</div>
+            <div class="mini-metrics">
+              <div class="metric"><span class="metric__k">+17%</span><span class="metric__v">performance gain on OSExpert-Eval</span></div>
+              <div class="metric"><span class="metric__k">89%</span><span class="metric__v">efficiency gap closed to humans</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="figure">
+            <img src="assets/images/motivation_method.png" alt="Motivation and method diagram" class="img" />
+            <figcaption>From inference-time scaling to verifiable skill discovery via bottom-up exploration.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="assets/images/workflow_skillset.png" alt="Workflow and skillset diagram" class="img" />
+            <figcaption>Skill set organization and fine-grained action handling during exploration.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="section section--alt">
+      <div class="container">
+        <h2>Resources</h2>
+        <div class="res-grid">
+          <a class="res" href="assets/files/paper.pdf" target="_blank" rel="noopener">
+            <div class="res__t">Paper (PDF)</div>
+            <div class="res__d">Full paper PDF.</div>
+          </a>
+          <a class="res" href="https://github.com/Oppugno-Rushi/OSExpert" target="_blank" rel="noopener">
+            <div class="res__t">Code</div>
+            <div class="res__d">Repository with implementation and materials.</div>
+          </a>
+          <a class="res" href="#" target="_blank" rel="noopener">
+            <div class="res__t">Dataset</div>
+            <div class="res__d">Add your release link here.</div>
+          </a>
+          <a class="res" href="#" target="_blank" rel="noopener">
+            <div class="res__t">Leaderboard</div>
+            <div class="res__d">Add your leaderboard link here.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="citation" class="section">
+      <div class="container">
+        <h2>Citation</h2>
+        <p>If you use OSExpert or OSExpert-Eval, please cite:</p>
+
+        <div class="bib">
+          <button class="copy" data-target="bibtex">Copy</button>
+          <pre id="bibtex">@inproceedings{osexpert2026,
+  title  = {{I'm Professional: Self-Teaching Computer-Use Agents with Professional Skills}},
+  author = {{Jiateng Liu, Zhenhailong Wang, Rushi Wang, Bingxuan Li, Jeonghwan Kim, Aditi Tiwari, Pengfei Yu, Denghui Zhang, Heng Ji}},
+  year   = {2026},
+  note   = {Under review}
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© <span id="year"></span> OSExpert • GitHub Pages</div>
+        <div class="footer__links">
+          <a href="https://github.com/Oppugno-Rushi/OSExpert" target="_blank" rel="noopener">GitHub</a>
+          <a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

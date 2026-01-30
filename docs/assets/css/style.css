@@ -73,6 +73,7 @@ body{
 h2{margin:0 0 12px;font-size:22px;letter-spacing:-.01em}
 h3{margin:0 0 10px;font-size:15px}
 .lead{color:var(--muted);max-width:920px}
+.abstract-full{color:var(--muted);max-width:100%;line-height:1.7}
 
 .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
 .card,.mini-card{
@@ -98,6 +99,11 @@ h3{margin:0 0 10px;font-size:15px}
 figcaption{color:var(--muted);font-size:12.5px;margin-top:8px}
 
 .gallery{display:grid;gap:14px;margin-top:12px}
+.benchmark-images{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;margin-top:14px;align-items:start}
+.benchmark-left,.benchmark-right{display:flex;flex-direction:column}
+.img-small{max-width:100%;width:100%}
+.img-table{max-width:100%;width:100%}
+.img-example{max-width:85%;width:85%;margin:0 auto;display:block}
 .example-grid{display:grid;gap:16px;margin-top:14px}
 .res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px}
 .res{
@@ -141,4 +147,6 @@ figcaption{color:var(--muted);font-size:12.5px;margin-top:8px}
   .grid2{grid-template-columns:1fr}
   .hero__title{font-size:28px}
   .res-grid{grid-template-columns:1fr}
+  .benchmark-images{grid-template-columns:1fr}
+  .img-example{max-width:100%;width:100%}
 }

@@ -63,7 +63,7 @@
     <section id="abstract" class="section section--alt">
       <div class="container">
         <h2>Abstract</h2>
-        <p>General-purpose computer-use agents have shown<br/>impressive performance across diverse digital<br/>environments. However, our new benchmark,<br/>OSExpert-Eval, indicates they remain far less<br/>helpful than human experts. Although inference-<br/>time scaling enables adaptation, these agents com-<br/>plete complex tasks inefficiently with degraded<br/>performance, transfer poorly to unseen UIs, and<br/>struggle with fine-grained action sequences. To<br/>solve the problem, we introduce a GUI-based<br/>depth-first search (GUI-DFS) exploration algo-<br/>rithm to comprehensively explore and verify an<br/>environment’s unit functions. The agent then ex-<br/>ploits compositionality between unit skills to self-<br/>construct a curriculum for composite tasks. To<br/>support fine-grained actions, we curate a database<br/>of action primitives for agents to discover during<br/>exploration; these are saved as a skill set once<br/>the exploration is complete. We use the learned<br/>skills to improve the agent’s performance and ef-<br/>ficiency by (1) enriching agents with ready-to-use<br/>procedural knowledge, allowing them to plan only<br/>once for long trajectories and generate accurate<br/>actions, and (2) enabling them to end inference-<br/>time scaling earlier by realizing their boundary<br/>of capabilities. Extensive experiments show that<br/>our environment-learned agent takes a meaningful<br/>step toward expert-level computer use, achieving<br/>a 17% performance gain on OSExpert-Eval and<br/>closing the efficiency gap to humans by 89%.</p>
+        <p class="abstract-full">General-purpose computer-use agents have shown impressive performance across diverse digital environments. However, our new benchmark, OSExpert-Eval, indicates they remain far less helpful than human experts. Although inference-time scaling enables adaptation, these agents complete complex tasks inefficiently with degraded performance, transfer poorly to unseen UIs, and struggle with fine-grained action sequences. To solve the problem, we introduce a GUI-based depth-first search (GUI-DFS) exploration algorithm to comprehensively explore and verify an environment's unit functions. The agent then exploits compositionality between unit skills to self-construct a curriculum for composite tasks. To support fine-grained actions, we curate a database of action primitives for agents to discover during exploration; these are saved as a skill set once the exploration is complete. We use the learned skills to improve the agent's performance and efficiency by (1) enriching agents with ready-to-use procedural knowledge, allowing them to plan only once for long trajectories and generate accurate actions, and (2) enabling them to end inference-time scaling earlier by realizing their boundary of capabilities. Extensive experiments show that our environment-learned agent takes a meaningful step toward expert-level computer use, achieving a 17% performance gain on OSExpert-Eval and closing the efficiency gap to humans by 89%.</p>
       </div>
     </section>
 
@@ -92,11 +92,18 @@
           </div>
         </div>
 
-        <div class="gallery">
-          <figure class="figure">
-            <img src="assets/images/data_distribution.png" alt="Task distribution pie chart" class="img" />
-            <figcaption>The inner ring shows the three high-level categories, while the outer ring breaks each category down by environment; slice sizes are proportional to the number of tasks.</figcaption>
-          </figure>
+        <div class="benchmark-images">
+          <div class="benchmark-left">
+            <figure class="figure">
+              <img src="assets/images/table.png" alt="Task table" class="img img-table" />
+            </figure>
+          </div>
+          <div class="benchmark-right">
+            <figure class="figure">
+              <img src="assets/images/data_distribution.png" alt="Task distribution pie chart" class="img img-small" />
+              <figcaption>The inner ring shows the three high-level categories, while the outer ring breaks each category down by environment; slice sizes are proportional to the number of tasks.</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -110,17 +117,17 @@
 
         <div class="example-grid">
           <figure class="figure">
-            <img src="assets/images/examples_unseen_ui.png" alt="Unseen UI examples" class="img" />
+            <img src="assets/images/examples_unseen_ui.png" alt="Unseen UI examples" class="img img-example" />
             <figcaption><b>Unseen UI:</b> Tableau + MiniWord examples.</figcaption>
           </figure>
 
           <figure class="figure">
-            <img src="assets/images/examples_long_horizon.png" alt="Long-horizon examples" class="img" />
+            <img src="assets/images/examples_long_horizon.png" alt="Long-horizon examples" class="img img-example" />
             <figcaption><b>Long Horizon:</b> LibreOffice Calc/Writer examples.</figcaption>
           </figure>
 
           <figure class="figure">
-            <img src="assets/images/examples_fine_grained.png" alt="Fine-grained examples" class="img" />
+            <img src="assets/images/examples_fine_grained.png" alt="Fine-grained examples" class="img img-example" />
             <figcaption><b>Fine-Grained:</b> GIMP manipulation examples.</figcaption>
           </figure>
         </div>

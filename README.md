@@ -4,47 +4,49 @@
 
 This repository contains the code and resources for OSExpert, a benchmark for evaluating general computer-use agents on professional expertise tasks.
 
-## Website
+## 🌐 Website
 
-The project website is available at: https://oppugno-rushi.github.io/OSExpert/
+Visit our project website: **[https://oppugno-rushi.github.io/OSExpert/](https://oppugno-rushi.github.io/OSExpert/)**
 
-## Repository Structure
+## 📋 Overview
 
-- `docs/` - GitHub Pages website files
-- `osexpert_github_pages_site/` - Original website source files
+OSExpert-Eval shows that current computer-use agents remain far from expert-level: they struggle with long-horizon tasks, generalize poorly to unseen UI designs, lack fine-grained control over action sequences, and still fall well short of human expert efficiency.
 
-## Setting Up GitHub Pages
+## 🎯 Key Features
 
-The website files are already in the `docs/` folder. To deploy:
+- **Long-Horizon compositional workflows** (LibreOffice + GIMP)
+- **Unseen UI generalization** (Tableau + MiniWord)
+- **Fine-grained action execution** (GIMP + LibreOffice)
+- **Efficiency** vs. human experts (time-to-complete)
 
-1. **Initialize git repository** (if not already done):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Add OSExpert website"
-   ```
+## 📊 Benchmark Scale
 
-2. **Connect to GitHub repository**:
-   ```bash
-   git remote add origin https://github.com/Oppugno-Rushi/OSExpert.git
-   git branch -M main
-   git push -u origin main
-   ```
+- **113** total tasks
+- Long Horizon: **30** tasks
+- Unseen UI: **50** tasks
+- Fine-Grained: **33** tasks
 
-3. **Enable GitHub Pages**:
-   - Go to your repository on GitHub: https://github.com/Oppugno-Rushi/OSExpert
-   - Click **Settings** → **Pages**
-   - Under **Build and deployment**:
-     - Source: **Deploy from a branch**
-     - Branch: `main`
-     - Folder: `/docs`
-   - Click **Save**
+## 🔬 Method
 
-4. **Wait 1-2 minutes** for GitHub to build and deploy your site.
+OSExpert learns verifiable skills from **bottom-up self-exploration** and reuses them for robust, efficient inference:
 
-Your website will be available at: `https://oppugno-rushi.github.io/OSExpert/`
+- **GUI-DFS exploration** to discover and verify unit functions
+- **Curriculum construction** by composing unit skills into composite procedures
+- **Fine-grained action primitives** discovered during exploration and stored as reusable skills
+- **Efficiency** via single-pass fast planning and a **skill-boundary check** for early stopping
 
-## Citation
+## 📈 Results
+
+- **+17%** performance gain on OSExpert-Eval
+- **89%** efficiency gap closed to humans
+
+## 📚 Resources
+
+- [Project Website](https://oppugno-rushi.github.io/OSExpert/)
+- [Paper PDF](docs/assets/files/paper.pdf)
+- [GitHub Repository](https://github.com/Oppugno-Rushi/OSExpert)
+
+## 📝 Citation
 
 If you use OSExpert or OSExpert-Eval, please cite:
 
@@ -57,7 +59,10 @@ If you use OSExpert or OSExpert-Eval, please cite:
 }
 ```
 
-## License
+## 👥 Authors
+
+Jiateng Liu, Zhenhailong Wang, Rushi Wang, Bingxuan Li, Jeonghwan Kim, Aditi Tiwari, Pengfei Yu, Denghui Zhang, Heng Ji
+
+## 📄 License
 
 [Add your license information here]
-

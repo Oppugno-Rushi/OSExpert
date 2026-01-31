@@ -39,11 +39,30 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Motivation &amp; Overview</h2>
-        <p class="lead">
-          OSExpert-Eval shows that current computer-use agents remain far from expert-level: they struggle with long-horizon tasks,
-          generalize poorly to unseen UI designs, lack fine-grained control over action sequences, and still fall well short of human expert efficiency.
-        </p>
+        <h2>Motivation</h2>
+        
+        <div class="motivation-box">
+          <h3>Limitations</h3>
+          <ul>
+            <li>Current agents rely on inference-time trial-and-error → slow, brittle, late-stage failures.</li>
+            <li>They generalize poorly to unseen UIs and lack fine-grained control.</li>
+            <li>Prior skill learning often depends on human-labeled workflows / tutorials / scripts → expensive and hard to scale.</li>
+          </ul>
+        </div>
+
+        <div class="motivation-box">
+          <h3>Key Insight</h3>
+          <p><strong>Explore once, execute many.</strong></p>
+          <p>Replace human labeling with systematic environment exploration; solve tasks via skill retrieval + composition.</p>
+        </div>
+
+        <div class="motivation-box">
+          <h3>Our Solution (OSExpert)</h3>
+          <ul>
+            <li>One-time cold-start GUI exploration (GUI-DFS) to learn verifiable unit skills and fine-grained primitives.</li>
+            <li>Deployment: compose learned skills + early capability checks, avoiding unnecessary inference-time scaling.</li>
+          </ul>
+        </div>
 
         <figure class="figure">
           <img src="assets/images/benchmark_overview.png" alt="OSExpert-Eval overview" class="img" />

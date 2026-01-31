@@ -47,6 +47,20 @@ body{
   letter-spacing:-.03em;
   text-align:center;
   font-weight:700;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite, bounce 2s ease infinite;
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 .hero__authors{color:var(--muted);font-weight:600}
 .hero__buttons{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}

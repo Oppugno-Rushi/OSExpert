@@ -59,6 +59,22 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="gallery">
+          <figure class="figure">
+            <img src="assets/images/motivation_method.png" alt="Motivation and method diagram" class="img" />
+            <figcaption>Figure 2. Up: Current general-purpose computer-use agents rely on inference-time scaling, yet remain prone to failures and high latency. Left: Prior approaches explore digital environments using human-curated queries or tutorial-derived queries, which are often unavailable or difficult to obtain for arbitrary environments. Right: Our framework does not require external data or human effort for exploration queries and more comprehensively discover the unit functions of the digital environment, and benefits both performance and efficiency. We introduce how we handle the fine-grained actions during the exploration and how we organize the learned skill set in Figure 3.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="assets/images/workflow_skillset.png" alt="Workflow and skillset diagram" class="img" />
+            <figcaption>Figure 3. Left: How our framework organizes and utilize the self-constructed skill set for robust and efficient inference. The unit functions are obtained from the terminal states as shown in Figure 2. Right: How we handled potential fine-grained actions during exploration stage. The fine-grained action handling is usually triggered by an error state in the exploration, as shown in Figure 2. The selected primitive fine-grained action template will be added to the skill set for solving future queries if verified helpful.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section id="benchmark" class="section">
       <div class="container">
         <h2>OSExpert-Eval Benchmark</h2>
@@ -122,18 +138,6 @@
               <div class="metric"><span class="metric__k">89%</span><span class="metric__v">efficiency gap closed to humans</span></div>
             </div>
           </div>
-        </div>
-
-        <div class="gallery">
-          <figure class="figure">
-            <img src="assets/images/motivation_method.png" alt="Motivation and method diagram" class="img" />
-            <figcaption>Figure 2. Up: Current general-purpose computer-use agents rely on inference-time scaling, yet remain prone to failures and high latency. Left: Prior approaches explore digital environments using human-curated queries or tutorial-derived queries, which are often unavailable or difficult to obtain for arbitrary environments. Right: Our framework does not require external data or human effort for exploration queries and more comprehensively discover the unit functions of the digital environment, and benefits both performance and efficiency. We introduce how we handle the fine-grained actions during the exploration and how we organize the learned skill set in Figure 3.</figcaption>
-          </figure>
-
-          <figure class="figure">
-            <img src="assets/images/workflow_skillset.png" alt="Workflow and skillset diagram" class="img" />
-            <figcaption>Figure 3. Left: How our framework organizes and utilize the self-constructed skill set for robust and efficient inference. The unit functions are obtained from the terminal states as shown in Figure 2. Right: How we handled potential fine-grained actions during exploration stage. The fine-grained action handling is usually triggered by an error state in the exploration, as shown in Figure 2. The selected primitive fine-grained action template will be added to the skill set for solving future queries if verified helpful.</figcaption>
-          </figure>
         </div>
       </div>
     </section>

@@ -99,7 +99,7 @@ h3{margin:0 0 10px;font-size:15px}
 figcaption{color:var(--muted);font-size:12.5px;margin-top:8px}
 
 .gallery{display:grid;gap:14px;margin-top:12px}
-.benchmark-images{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;align-items:stretch}
+.benchmark-images{display:grid;grid-template-columns:0.7fr 0.3fr;gap:20px;margin-top:14px;align-items:stretch}
 .benchmark-left,.benchmark-right{display:flex;flex-direction:column}
 .benchmark-left .figure,.benchmark-right .figure{display:flex;flex-direction:column;height:100%}
 .benchmark-left .img,.benchmark-right .img{height:100%;width:100%;object-fit:contain;object-position:center}

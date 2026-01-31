@@ -42,11 +42,11 @@ body{
 .hero{padding:14px 0 24px}
 .hero__title{
   margin:8px 0 10px;
-  font-size:56px;
+  font-size:50px;
   line-height:1.15;
   letter-spacing:-.03em;
   text-align:center;
-  font-weight:900;
+  font-weight:700;
 }
 .hero__authors{color:var(--muted);font-weight:600}
 .hero__buttons{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}

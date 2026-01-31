@@ -43,6 +43,7 @@
         <div class="motivation-box motivation-box-red">
           <h3>Limitations</h3>
           <ul>
+            <li>Human annotation relies on static, manually labeled workflows → breaks as software and UIs evolve over time, making it hard to maintain and scale.</li>
             <li>Current agents rely on inference-time trial-and-error → slow, brittle, late-stage failures.</li>
             <li>They generalize poorly to unseen UIs and lack fine-grained control.</li>
             <li>Prior skill learning often depends on human-labeled workflows / tutorials / scripts → expensive and hard to scale.</li>
@@ -52,8 +53,9 @@
         <div class="motivation-box motivation-box-yellow">
           <h3>Key Insight</h3>
           <ul>
-            <li>Explore once, execute many.</li>
-            <li>Replace human labeling with systematic environment exploration; solve tasks via skill retrieval + composition.</li>
+            <li>Replace human annotation + offline training → systematic environment exploration + environment-specific skill sets.</li>
+            <li>Paradigm shift: learn from static data → learn from verifiable interactions.</li>
+            <li>Solve tasks by retrieving and composing skills from the constructed skill library, rather than re-exploring at inference time.</li>
           </ul>
         </div>
 
@@ -61,7 +63,7 @@
           <h3>Our Solution (OSExpert)</h3>
           <ul>
             <li>One-time cold-start GUI exploration (GUI-DFS) to learn verifiable unit skills and fine-grained primitives.</li>
-            <li>Deployment: compose learned skills + early capability checks, avoiding unnecessary inference-time scaling.</li>
+            <li>Full Efficiency: compose learned skills + early capability checks, avoiding unnecessary inference-time scaling.</li>
           </ul>
         </div>
 

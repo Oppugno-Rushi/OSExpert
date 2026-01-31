@@ -42,10 +42,11 @@ body{
 .hero{padding:14px 0 24px}
 .hero__title{
   margin:8px 0 10px;
-  font-size:48px;
+  font-size:56px;
   line-height:1.15;
   letter-spacing:-.03em;
   text-align:center;
+  font-weight:900;
 }
 .hero__authors{color:var(--muted);font-weight:600}
 .hero__buttons{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
@@ -150,7 +151,7 @@ figcaption{color:var(--muted);font-size:12.5px;margin-top:8px}
 
 @media (max-width: 900px){
   .grid2{grid-template-columns:1fr}
-  .hero__title{font-size:28px}
+  .hero__title{font-size:36px;text-align:center}
   .res-grid{grid-template-columns:1fr}
   .benchmark-images{grid-template-columns:1fr}
   .example-grid{grid-template-columns:1fr}

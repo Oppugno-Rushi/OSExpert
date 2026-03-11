@@ -51,11 +51,14 @@ OSExpert learns verifiable skills from **bottom-up self-exploration** and reuses
 If you use OSExpert or OSExpert-Eval, please cite:
 
 ```bibtex
-@inproceedings{osexpert2026,
-  title  = {{I'm Professional: Self-Teaching Computer-Use Agents with Professional Skills}},
-  author = {{Jiateng Liu, Zhenhailong Wang, Rushi Wang, Bingxuan Li, Jeonghwan Kim, Aditi Tiwari, Pengfei Yu, Denghui Zhang, Heng Ji}},
-  year   = {2026},
-  note   = {Under review}
+@misc{liu2026osexpertcomputeruseagentslearning,
+      title={OSExpert: Computer-Use Agents Learning Professional Skills via Exploration},
+      author={Jiateng Liu and Zhenhailong Wang and Rushi Wang and Bingxuan Li and Jeonghwan Kim and Aditi Tiwari and Pengfei Yu and Denghui Zhang and Heng Ji},
+      year={2026},
+      eprint={2603.07978},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2603.07978},
 }
 ```
 

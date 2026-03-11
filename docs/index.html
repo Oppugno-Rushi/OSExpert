@@ -108,10 +108,10 @@
           <div class="card">
             <h3>Task categories</h3>
             <ul>
-              <li><b>Long-Horizon compositional workflows</b> (LibreOffice + GIMP)</li>
-              <li><b>Unseen UI generalization</b> (Tableau + MiniWord)</li>
-              <li><b>Fine-grained action execution</b> (GIMP + LibreOffice)</li>
-              <li><b>Efficiency</b> vs. human experts (time-to-complete)</li>
+              <li>Long-horizon compositional workflows</li>
+              <li>Generalization to unseen and creative user interfaces</li>
+              <li>Fine-grained low-level actions</li>
+              <li>Execution efficiency</li>
             </ul>
           </div>
           <div class="card">
@@ -152,15 +152,15 @@
             <ul>
               <li><b>GUI-DFS exploration</b> to discover and verify unit functions.</li>
               <li><b>Curriculum construction</b> by composing unit skills into composite procedures.</li>
-              <li><b>Fine-grained action primitives</b> discovered during exploration and stored as reusable skills.</li>
+              <li><b>Fine-grained skill construction</b> by invoking curated action primitives during exploration and retaining only verified solutions.</li>
               <li><b>Efficiency</b> via single-pass fast planning and a <b>skill-boundary check</b> for early stopping.</li>
             </ul>
           </div>
           <div class="mini-card">
             <div class="mini-title">Key reported gains</div>
             <div class="mini-metrics">
-              <div class="metric"><span class="metric__k">∼20%</span><span class="metric__v">performance gain on OSExpert-Eval</span></div>
-              <div class="metric"><span class="metric__k">∼80%</span><span class="metric__v">efficiency gap closed to humans</span></div>
+              <div class="metric"><span class="metric__k">~20%</span><span class="metric__v">success gain on OSExpert-Eval</span></div>
+              <div class="metric"><span class="metric__k">~80%</span><span class="metric__v">efficiency-gap reduction toward human experts</span></div>
             </div>
           </div>
         </div>
@@ -196,11 +196,14 @@
 
         <div class="bib">
           <button class="copy" data-target="bibtex">Copy</button>
-          <pre id="bibtex">@inproceedings{osexpert2026,
-  title  = {{I'm Professional: Self-Teaching Computer-Use Agents with Professional Skills}},
-  author = {{Jiateng Liu, Zhenhailong Wang, Rushi Wang, Bingxuan Li, Jeonghwan Kim, Aditi Tiwari, Pengfei Yu, Denghui Zhang, Heng Ji}},
-  year   = {2026},
-  note   = {Under review}
+          <pre id="bibtex">@misc{liu2026osexpertcomputeruseagentslearning,
+      title={OSExpert: Computer-Use Agents Learning Professional Skills via Exploration},
+      author={Jiateng Liu and Zhenhailong Wang and Rushi Wang and Bingxuan Li and Jeonghwan Kim and Aditi Tiwari and Pengfei Yu and Denghui Zhang and Heng Ji},
+      year={2026},
+      eprint={2603.07978},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2603.07978},
 }</pre>
         </div>
       </div>

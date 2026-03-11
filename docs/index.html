@@ -41,32 +41,35 @@
         <h2>Motivation</h2>
         
         <div class="motivation-box motivation-box-red">
-          <h3>Limitations</h3>
+          <div class="motivation-kicker">The problem</div>
+          <h3>Why do OpenClaw-style agents still fall short?</h3>
           <ul>
-            <li>Human annotation relies on static, manually labeled workflows → breaks as software and UIs evolve over time, making it hard to maintain and scale.</li>
-            <li>Current agents rely on inference-time trial-and-error → slow, brittle, late-stage failures.</li>
-            <li>They generalize poorly to unseen UIs and lack fine-grained control.</li>
-            <li>Prior skill learning often depends on human-labeled workflows / tutorials / scripts → expensive and hard to scale.</li>
+            <li>Because their skills are still <b>limited, shallow, and non-generalizable</b>: they may solve familiar patterns, but break quickly once the query departs from what they have effectively seen before.</li>
+            <li>OSExpert-Eval shows that even strong general-purpose agents remain trapped in <b>test-time scaling</b> and repeated trial-and-error, leading to slow inference, brittle trajectories, and late-stage failures.</li>
+            <li>They still <b>struggle to generalize</b> to unseen or creative user interfaces, where superficial pattern matching is not enough to recover the right procedure.</li>
+            <li>They also fail on <b>fine-grained low-level actions</b>, where reliable expert behavior depends on precise, reusable procedural skills rather than one-off guesses.</li>
           </ul>
         </div>
 
         <div class="motivation-box motivation-box-yellow">
-          <h3>Key Insight</h3>
+          <div class="motivation-kicker">The shift</div>
+          <h3>Stop manually annotating skills. Let the agent discover them.</h3>
           <ul>
-            <li>Instead of adapting agents through more human-labeled workflows, OSExpert lets agents learn directly from the target environment.</li>
-            <li>It shifts learning from static demonstrations to verifiable interactions.</li>
-            <li>The agent first discovers and validates reusable skills through exploration, then solves tasks by retrieving and composing these skills.</li>
-            <li>This reduces repeated inference-time trial-and-error and gives the agent clearer awareness of its skill boundaries.</li>
+            <li>Instead of asking humans to handcraft an ever-growing library of workflows, <b>OSExpert learns directly from the target environment</b> through automatic LLM-driven exploration.</li>
+            <li>The core idea is to replace static demonstrations with <b>verifiable interaction</b>: discover what actually works, keep what is validated, and discard what is not.</li>
+            <li>This is why we introduce <b>GUI-DFS</b>: to systematically uncover reusable unit skills, expose capability boundaries, and make skill acquisition scalable.</li>
+            <li>Once these skills are discovered, the agent can retrieve and compose them at inference time, solving the root problem rather than paying the same trial-and-error cost again and again.</li>
           </ul>
         </div>
 
         <div class="motivation-box motivation-box-blue">
-          <h3>Our Solution (OSExpert)</h3>
+          <div class="motivation-kicker">The answer</div>
+          <h3>OSExpert turns exploration into reusable professional skills.</h3>
           <ul>
-            <li>GUI-DFS exploration: systematically explore the environment and verify unit functions.</li>
-            <li>Self-constructed curriculum: compose discovered unit skills into higher-level procedures.</li>
-            <li>Fine-grained skill construction: invoke curated action primitives and keep only verified successful procedures.</li>
-            <li>Efficient inference: use learned skills with single-pass fast planning and skill-boundary checks for early stopping.</li>
+            <li><b>GUI-DFS exploration</b>: systematically traverse the interface, discover unit functions, and retain only verified capabilities.</li>
+            <li><b>Self-constructed curriculum</b>: compose discovered unit skills into higher-level procedures that support long-horizon professional workflows.</li>
+            <li><b>Fine-grained skill construction</b>: invoke curated action primitives during exploration and keep only verified solutions for precise low-level control.</li>
+            <li><b>Skill-aware efficient inference</b>: plan once, execute with reusable procedural knowledge, and stop early with explicit skill-boundary checks.</li>
           </ul>
         </div>
 

@@ -95,14 +95,41 @@ h3{margin:0 0 10px;font-size:15px}
   border-radius:var(--radius);
   padding:18px 20px;
   margin:16px 0;
+  position:relative;
+  box-shadow:var(--shadow);
+  overflow:hidden;
 }
-.motivation-box-red{background:#fee2e2}
-.motivation-box-yellow{background:#fef3c7}
-.motivation-box-blue{background:#dbeafe}
-.motivation-box h3{margin:0 0 10px;font-size:16px;font-weight:800;color:var(--ink)}
+.motivation-box::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:6px;
+}
+.motivation-box-red{background:linear-gradient(135deg,#fff1f2 0%,#fee2e2 100%)}
+.motivation-box-red::before{background:#ef4444}
+.motivation-box-yellow{background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%)}
+.motivation-box-yellow::before{background:#f59e0b}
+.motivation-box-blue{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)}
+.motivation-box-blue::before{background:#3b82f6}
+.motivation-kicker{
+  display:inline-block;
+  margin:0 0 8px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink);
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(17,24,39,.08);
+}
+.motivation-box h3{margin:0 0 10px;font-size:22px;line-height:1.2;font-weight:900;color:var(--ink);letter-spacing:-.02em}
 .motivation-box p{margin:8px 0;color:var(--muted);line-height:1.6}
-.motivation-box ul{margin:8px 0 0 20px;color:var(--muted);line-height:1.7}
-.motivation-box li{margin:6px 0}
+.motivation-box ul{margin:8px 0 0 20px;color:#374151;line-height:1.8}
+.motivation-box li{margin:8px 0}
 
 .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
 .card,.mini-card{
